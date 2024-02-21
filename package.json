@@ -1,5 +1,5 @@
 {
-  "name": "taskcreater",
+  "name": "task-creater",
   "version": "1.0.0",
   "description": "Quickly create tasks and related notes in Obsidian.md",
   "main": "main.ts",
