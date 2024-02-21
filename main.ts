@@ -29,7 +29,7 @@ export default class TaskCreater extends Plugin {
 
 		const createTaskRibbonIcon = this.addRibbonIcon("list-checks","Create Task", (evt: MouseEvent) => {
 			new CreateTaskModal(this.app, (task) => {
-
+				new Notice(`Creating new task ${task.Name}`);
 			}).open();
 		});
 
@@ -50,19 +50,34 @@ export default class TaskCreater extends Plugin {
 }
 
 
+class Task {
+	name: string;
+	description: string;
+	dueDate: string;
+	createdDate: string;
+
+	constructor(name: string, description: string, dueDate: string, createdDate: string) {
+		this.name = name;
+		this.description = description;
+		this.dueDate = dueDate;
+		this.createdDate = createdDate
+	}
+}
+
+
 class CreateTaskModal extends Modal {
-	task: {
-		name: string;
-		description: string;
-		dueDate: string;
-		createdDate: string;
-	};
+	task: Task;
+
+	taskName: string;
+	taskDesc: string;
+	taskDueDate: string;
+	taskCreatedDate: string;
 
 	
 	onSubmit: (task: object) => void;
 
 	// returns task object when submitted???
-	constructor(app: App, onSubmit: (task: object) => void) {
+	constructor(app: App, onSubmit: (task: Task) => void) {
 		super(app);
 	}
 
@@ -77,7 +92,7 @@ class CreateTaskModal extends Modal {
 			.setName("Task Name")
 			.addText((text) => 
 				text.onChange((value) => {
-					this.task.name = value;
+					this.taskName = value;
 				}));
 
 		// Get the description of the task
@@ -85,7 +100,7 @@ class CreateTaskModal extends Modal {
 			.setName("Task Description")
 			.addText((text) =>
 				text.onChange((value) => {
-					this.task.description = value;
+					this.taskDesc = value;
 				}));
 
 		// Get the due date of the task
@@ -93,7 +108,7 @@ class CreateTaskModal extends Modal {
 			.setName("Due Date")
 			.addText((text) =>
 				text.onChange((value) => {
-					this.task.dueDate = value;
+					this.taskDueDate = value;
 				}));
 
 		// Get the created date of the task
@@ -101,7 +116,7 @@ class CreateTaskModal extends Modal {
 			.setName("Created Date")
 			.addText((text) =>
 				text.onChange((value) => {
-					this.task.createdDate = value;
+					this.taskCreatedDate = value;
 				}));
 
 		new Setting(contentEl)
