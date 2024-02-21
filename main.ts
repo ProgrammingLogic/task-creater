@@ -32,6 +32,8 @@ export default class TaskCreater extends Plugin {
 
 			}).open();
 		});
+
+		this.addSettingTab(new TaskCreaterSettingsTab(this.app, this));
 	}
 
 	onunload() {
