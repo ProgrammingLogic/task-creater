@@ -6,7 +6,8 @@ import {
 	Notice, 
 	Plugin, 
 	PluginSettingTab, 
-	Setting 
+	Setting,
+	Menu
 } from 'obsidian';
 
 
@@ -27,7 +28,7 @@ export default class TaskCreater extends Plugin {
 		await this.loadSettings();
 
 		const createTaskRibbonIcon = this.addRibbonIcon("list-checks","Create Task", (evt: MouseEvent) => {
-			new Notice("Create task button has been pressed!");
+			new CreateTaskModal(this.app).open();
 		});
 	}
 
