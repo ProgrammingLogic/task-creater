@@ -2,13 +2,23 @@
   "name": "task-creater",
   "version": "1.0.0",
   "description": "Quickly create tasks and related notes in Obsidian.md",
-  "main": "main.ts",
+  "main": "main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "node esbuild.config.mjs",
+		"build": "tsc -noEmit -skipLibCheck && node esbuild.config.mjs production",
+		"version": "node version-bump.mjs && git add manifest.json versions.json"
   },
-  "keywords": [
-    "obsidian"
-  ],
+  "keywords": [],
   "author": "Jonathyn Stiverson",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^16.11.6",
+    "@typescript-eslint/eslint-plugin": "5.29.0",
+    "@typescript-eslint/parser": "5.29.0",
+    "builtin-modules": "3.3.0",
+    "esbuild": "0.17.3",
+    "obsidian": "latest",
+    "tslib": "2.4.0",
+    "typescript": "4.7.4"
+	}
 }
