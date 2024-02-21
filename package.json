@@ -1,0 +1,14 @@
+{
+  "name": "taskcreater",
+  "version": "1.0.0",
+  "description": "Quickly create tasks and related notes in Obsidian.md",
+  "main": "main.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "obsidian"
+  ],
+  "author": "Jonathyn Stiverson",
+  "license": "MIT"
+}
