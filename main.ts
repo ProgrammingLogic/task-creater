@@ -12,12 +12,12 @@ import {
 
 
 interface TaskCreaterSettings {
-	mySetting: string;
+	TasksDirectory: string;
 }
 
 
 const DEFAULT_SETTINGS: TaskCreaterSettings = {
-	mySetting: 'default'
+	TasksDirectory: "/Tasks"
 }
 
 
@@ -39,11 +39,11 @@ export default class TaskCreater extends Plugin {
 	}
 
 	async loadSettings() {
-		
+		this.settings = Object.assign({}, DEFAULT_SETTINGS, await this.loadData());
 	}
 
 	async saveSettings() {
-		
+		await this.saveData(this.settings);
 	}
 }
 
