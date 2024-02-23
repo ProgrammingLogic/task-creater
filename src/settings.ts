@@ -3,12 +3,19 @@ import PersonalPlugin from "./main";
 
 
 export interface PersonalPluginSettings {
-	
+	ShoppingCartFiles: string[];
+	PurchaseTrackingFiles: string[];
 }
 
 
 export const DEFAULT_SETTINGS: PersonalPluginSettings = {
-	
+	ShoppingCartFiles: [
+		"/Purchases/shopping_cart.json"
+	],
+
+	PurchaseTrackingFiles: [
+		"/Purchases/purchases.json"
+	]
 }
 
 
