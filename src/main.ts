@@ -1,5 +1,5 @@
 import { App, Editor, MarkdownView, Modal, Notice, Plugin, Menu } from 'obsidian';
-import { PersonalPluginSettingsTab, PersonalPluginSettings, DEFAULT_SETTINGS } from "settings";
+import { PersonalPluginSettings, PersonalPluginSettingsTab, DEFAULT_SETTINGS } from './settings';
 import { Purchase } from 'src/PurchaseTracking/Purchase';
 
 
