@@ -3,12 +3,12 @@ import PersonalPlugin from "main";
 
 
 export interface PersonalPluginSettings {
-	TasksDirectory: string;
+	
 }
 
 
 export const DEFAULT_SETTINGS: PersonalPluginSettings = {
-	TasksDirectory: "/Tasks"
+	
 }
 
 
@@ -22,20 +22,6 @@ export class PersonalPluginSettingsTab extends PluginSettingTab {
 
 
 	display(): void {
-		const {containerEl} = this;
-
-		containerEl.empty();
-
-		new Setting(containerEl)
-			.setName("Tasks Directory")
-			.setDesc("Where created tasks will be stored")
-			.addText(text => text
-				.setPlaceholder("Enter the tasks directory")
-				.setValue(this.plugin.settings.TasksDirectory)
-				.onChange(async (value) => {
-					this.plugin.settings.TasksDirectory = value;
-					await this.plugin.saveSettings();
-				})
-			)
+		
 	}
 }
