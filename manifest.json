@@ -1,9 +1,9 @@
 {
-	"id": "task-creater",
-	"name": "Task Creater",
+	"id": "personal_plugin",
+	"name": "Personal Plugin",
 	"version": "1.0.0",
 	"minAppVersion": "0.15.0",
-	"description": "Automatically create tasks",
+	"description": "Various utilities for my Obsidian workflow",
 	"author": "Jonathyn Stiverson",
 	"authorUrl": "https://github.com/ProgrammingLogic",
 	"isDesktopOnly": false
