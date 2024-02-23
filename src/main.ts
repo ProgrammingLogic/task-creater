@@ -1,6 +1,6 @@
 import { App, Editor, MarkdownView, Modal, Notice, Plugin, Menu } from 'obsidian';
 import { PersonalPluginSettingsTab, PersonalPluginSettings, DEFAULT_SETTINGS } from "settings";
-import { FuturePurchase } from 'src/FuturePurchase';
+import { Purchase } from 'src/PurchaseTracking/Purchase';
 
 
 export default class PersonalPlugin extends Plugin {

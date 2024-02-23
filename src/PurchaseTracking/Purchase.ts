@@ -1,7 +1,7 @@
 import { App } from "obsidian";
 
 
-export class FuturePurchase {
+export class Purchase {
     app: App;
 
     Name: string;
