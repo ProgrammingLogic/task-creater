@@ -54,7 +54,7 @@ export class Purchase {
 
 
     setName(name: string) {
-
+        this.Name = name;
     }
 
 
