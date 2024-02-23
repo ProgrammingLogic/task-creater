@@ -1,4 +1,5 @@
 import { App } from "obsidian";
+import { IsValidURL } from "src/Utlities/ValidURL";
 
 
 export class Purchase {
@@ -64,7 +65,12 @@ export class Purchase {
 
 
     setURL(url: string) {
-
+        if (IsValidURL(url)) {
+            this.URL = url;
+        }
+        else {
+            throw `URL ${url} is invalid!`;
+        }
     }
 
 
