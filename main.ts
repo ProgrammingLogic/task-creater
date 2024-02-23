@@ -51,16 +51,16 @@ export default class TaskCreater extends Plugin {
 
 
 class Task {
-	name: string;
-	description: string;
-	dueDate: string;
-	createdDate: string;
+	Name: string;
+	Description: string;
+	DueDate: string;
+	CreatedDate: string;
 
 	constructor(name: string, description: string, dueDate: string, createdDate: string) {
-		this.name = name;
-		this.description = description;
-		this.dueDate = dueDate;
-		this.createdDate = createdDate
+		this.Name = name;
+		this.Description = description;
+		this.DueDate = dueDate;
+		this.CreatedDate = createdDate
 	}
 }
 
