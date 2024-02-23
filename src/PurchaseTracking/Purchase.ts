@@ -75,7 +75,11 @@ export class Purchase {
 
 
     setNotePath(notePath: string) {
+        this.NotePath = notePath;
+
+        // TODO
         // ensure path exists in vault
+        // create note if it doesn't 
     }
 
 
