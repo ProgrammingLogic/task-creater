@@ -1,4 +1,5 @@
-import 	{ PluginSettingTab, Setting } from "obsidian";
+import 	{ App, PluginSettingTab, Setting } from "obsidian";
+import PersonalPlugin from "main";
 
 
 export interface PersonalPluginSettings {
