@@ -91,7 +91,14 @@ export class Purchase {
 
 
     removeTag(tag: string) {
-        // ensure tag exists
+        let tagIndex = this.Tags.findIndex(value => value === tag);
+
+        if (tagIndex !== -1) {
+            this.Tags.splice(tagIndex, 1);
+        }
+        else {
+            throw `Tag ${tag} does not exist in Purchase ${this.Name}!`
+        }
     }
 
 
