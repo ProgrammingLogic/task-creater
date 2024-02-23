@@ -59,7 +59,7 @@ export class Purchase {
 
 
     setDescription(description: string) {
-
+        this.Description = description;
     }
 
 
