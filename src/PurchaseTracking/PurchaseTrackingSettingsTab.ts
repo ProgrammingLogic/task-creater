@@ -1,6 +1,6 @@
 import { App, PluginSettingTab, Setting } from "obsidian";
 import { PurchaseTracking } from "PurchaseTracking";
-import { PersonalPlugin } from "../main";
+import PersonalPlugin from "../main";
 
 
 export class PurchaseTrackingSettingsTab extends PluginSettingTab {
