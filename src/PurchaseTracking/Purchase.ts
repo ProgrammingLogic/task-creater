@@ -48,8 +48,8 @@ export class Purchase {
 
 
     purchase() {
-        // Set purchased to true
-        // Set datePurchased to today
+        this.Purchased = true;
+        this.DatePurchased = new Date();
     }
 
 
