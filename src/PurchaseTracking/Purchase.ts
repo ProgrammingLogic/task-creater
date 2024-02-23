@@ -45,6 +45,8 @@ export class Purchase {
     constructor(app: App) {
         this.app = app;
         this.DateCreated = new Date();
+
+        this.Tags = [];
     }
 
 
