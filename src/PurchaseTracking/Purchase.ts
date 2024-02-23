@@ -86,7 +86,7 @@ export class Purchase {
 
 
     addTag(tag: string) {
-    
+        this.Tags.push(tag);
     }
 
 
