@@ -16,6 +16,15 @@ export default class PersonalPlugin extends Plugin {
 		this.addSettingTab(new PersonalPluginSettingsTab(this.app, this));
 
 		this.shoppingCart = new ShoppingCart(this.app, this);
+
+
+		this.addCommand({
+			id: "add-item-to-cart",
+			name: "Add item to cart",
+			callback: () => {
+				console.log("Good morning!");
+			}
+		});
 	}
 
 	onunload() {
