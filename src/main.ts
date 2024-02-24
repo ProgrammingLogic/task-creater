@@ -23,6 +23,13 @@ export default class PersonalPlugin extends Plugin {
 			name: "Add item to cart",
 			callback: this.openAddToShoppingCartModal,
 		});
+
+
+		this.addRibbonIcon(
+			"shopping-cart",
+			"Add item to shopping cart",
+			this.openAddToShoppingCartModal
+		);
 	}
 
 	onunload() {
