@@ -25,7 +25,7 @@ export class AddToShoppingCartModal extends Modal {
                 .setPlaceholder("Enter the item name")
                 .onChange(value => {
                     this.purchase.setName(value);
-                }));
+            }));
 
 
         new Setting(contentEl)
@@ -35,7 +35,7 @@ export class AddToShoppingCartModal extends Modal {
                 .setPlaceholder("Enter the item description")
                 .onChange(value => {
                     this.purchase.setDescription(value);
-                }));
+            }));
 
 
         new Setting(contentEl)
@@ -45,7 +45,7 @@ export class AddToShoppingCartModal extends Modal {
                 .setPlaceholder("Enter the item price")
                 .onChange(value => {
                     this.purchase.setPrice(Number(value));
-                }));
+            }));
 
 
         new Setting(contentEl)
@@ -55,7 +55,7 @@ export class AddToShoppingCartModal extends Modal {
                 .setPlaceholder("Enter the item rating")
                 .onChange(value => {
                     this.purchase.setRating(Number(value));
-                }));
+            }));
 
 
         new Setting(contentEl)
@@ -85,7 +85,7 @@ export class AddToShoppingCartModal extends Modal {
                 .setPlaceholder("Enter the due date")
                 .onChange(value => {
                     this.purchase.setDueDate(new Date(value));
-                }));
+            }));
 
 
         new Setting(contentEl)
@@ -95,7 +95,7 @@ export class AddToShoppingCartModal extends Modal {
                 .setPlaceholder("Enter the item URL")
                 .onChange(value => {
                     this.purchase.setURL(value);
-                }));
+            }));
 
 
         new Setting(contentEl)
@@ -105,7 +105,7 @@ export class AddToShoppingCartModal extends Modal {
                 .setPlaceholder("Enter the item note path")
                 .onChange(value => {
                     this.purchase.setNotePath(value);
-                }));
+            }));
 
 
         new Setting(contentEl)
@@ -118,7 +118,7 @@ export class AddToShoppingCartModal extends Modal {
                     for (let tag of tags) {
                         this.purchase.addTag(tag);
                     }
-                }));
+            }));
         
 
         new Setting(contentEl)
@@ -126,7 +126,7 @@ export class AddToShoppingCartModal extends Modal {
                 button.setButtonText("Add to Cart")
                     .onClick(async () => {
                         await this.addItemToCart();
-                    });
+                });
             });
     }
 
