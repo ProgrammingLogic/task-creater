@@ -7,4 +7,14 @@ export class AddToShoppingCartModal extends Modal {
     constructor(app: App) {
         super(app);
     }
+
+
+    onOpen() {
+
+    }
+
+
+    onClose() {
+        
+    }
 }
