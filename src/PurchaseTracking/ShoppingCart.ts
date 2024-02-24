@@ -1,4 +1,4 @@
-import App from "obsidian";
+import { App } from "obsidian";
 import { Purchase } from "./Purchase";
 import PersonalPlugin from "../main";
 import { PersonalPluginSettings } from "src/settings";
