@@ -3,6 +3,7 @@ import { PersonalPluginSettings, PersonalPluginSettingsTab, DEFAULT_SETTINGS } f
 import { Purchase } from 'src/PurchaseTracking/Purchase';
 import { ShoppingCart } from './PurchaseTracking/ShoppingCart';
 import { PurchaseTracking } from './PurchaseTracking/PurchaseTracking';
+import { AddToShoppingCartModal } from './PurchaseTracking/AddToShoppingCartModal';
 
 
 export default class PersonalPlugin extends Plugin {
@@ -46,6 +47,6 @@ export default class PersonalPlugin extends Plugin {
 
 
 	openAddToShoppingCartModal() {
-		console.log("Good morning!");
+		new AddToShoppingCartModal(this.app).open();
 	}
 }
