@@ -21,9 +21,7 @@ export default class PersonalPlugin extends Plugin {
 		this.addCommand({
 			id: "add-item-to-cart",
 			name: "Add item to cart",
-			callback: () => {
-				console.log("Good morning!");
-			}
+			callback: this.openAddToShoppingCartModal,
 		});
 	}
 
@@ -41,6 +39,6 @@ export default class PersonalPlugin extends Plugin {
 
 
 	openAddToShoppingCartModal() {
-		
+		console.log("Good morning!");
 	}
 }
