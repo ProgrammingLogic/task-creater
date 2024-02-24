@@ -38,4 +38,9 @@ export default class PersonalPlugin extends Plugin {
 	async saveSettings() {
 		await this.saveData(this.settings);
 	}
+
+
+	openAddToShoppingCartModal() {
+		
+	}
 }
