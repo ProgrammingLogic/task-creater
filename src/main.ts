@@ -22,7 +22,9 @@ export default class PersonalPlugin extends Plugin {
 		this.addCommand({
 			id: "add-item-to-cart",
 			name: "Add item to cart",
-			callback: this.openAddToShoppingCartModal,
+			callback: () => {
+				this.openAddToShoppingCartModal();
+			}
 		});
 
 
