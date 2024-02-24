@@ -10,11 +10,13 @@ export class AddToShoppingCartModal extends Modal {
 
 
     onOpen() {
-
+        const {contentEl} = this;
+        contentEl.setText("Shopping Cart Menu!");
     }
 
 
     onClose() {
-        
+        const {contentEl} = this;
+        contentEl.empty();
     }
 }
