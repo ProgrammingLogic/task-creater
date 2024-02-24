@@ -169,7 +169,12 @@ export class Purchase {
 
 
     setDateCreated(dateCreated: Date) {
-        // make sure dateCreated is not in the future
+        if (dateCreated > new Date()) {
+            throw `DateCreated ${dateCreated} cannot be in the future!`;
+        }
+        else {
+            this.DateCreated = dateCreated;
+        }
     }
 
 
