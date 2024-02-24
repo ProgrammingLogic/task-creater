@@ -136,7 +136,12 @@ export class Purchase {
 
 
     setNeed(need: boolean) {
-        // make sure want is not true
+        if (this.Want && need) {
+            throw `Want and Need cannot both be true!`;
+        }
+        else {
+            this.Need = need;
+        }
     }
 
 
