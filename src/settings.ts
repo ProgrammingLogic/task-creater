@@ -29,6 +29,21 @@ export class PersonalPluginSettingsTab extends PluginSettingTab {
 
 
 	display(): void {
+		const {containerEl} = this;
+
+		containerEl.empty();
+
+
+		new Setting(containerEl)
+			.setName("Shopping Cart Files")
+			.setDesc("The files that contain the shopping cart data")
+			.addTextArea(text => text
+				.setPlaceholder("Enter the file paths")
+				.setValue(this.plugin.settings.ShoppingCartFiles.join("\n"))
+				.onChange(async (value) => {
+					this.plugin.settings.ShoppingCartFiles = value.split("\n");
+					await this.plugin.saveSettings();
+				}));
 		
 	}
 }
