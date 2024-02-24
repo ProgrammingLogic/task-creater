@@ -46,6 +46,9 @@ export class Purchase {
         this.app = app;
         this.DateCreated = new Date();
 
+        this.Want = false;
+        this.Need = false;
+
         this.Tags = [];
     }
 
@@ -123,7 +126,12 @@ export class Purchase {
 
 
     setWant(want: boolean) {
-        // make sure need is not true
+        if (this.Need && want) {
+            throw `Want and Need cannot both be true!`;
+        }
+        else {
+            this.Want = want;
+        }
     }
 
 
