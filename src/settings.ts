@@ -44,6 +44,18 @@ export class PersonalPluginSettingsTab extends PluginSettingTab {
 					this.plugin.settings.ShoppingCartFiles = value.split("\n");
 					await this.plugin.saveSettings();
 				}));
+
+
+		new Setting(containerEl)
+			.setName("Purchase Tracking Files")
+			.setDesc("The files containing the purchase tracking data")
+			.addTextArea(text => text
+				.setPlaceholder("Enter the file paths")
+				.setValue(this.plugin.settings.PurchaseTrackingFiles.join("\n"))
+				.onChange(async (value) => {
+					this.plugin.settings.PurchaseTrackingFiles = value.split("\n");
+					await this.plugin.saveSettings();
+				}));
 		
 	}
 }
