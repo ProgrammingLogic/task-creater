@@ -29,7 +29,9 @@ export default class PersonalPlugin extends Plugin {
 		this.addRibbonIcon(
 			"shopping-cart",
 			"Add item to shopping cart",
-			this.openAddToShoppingCartModal
+			(evt: MouseEvent) => {
+				this.openAddToShoppingCartModal();
+			}
 		);
 	}
 
