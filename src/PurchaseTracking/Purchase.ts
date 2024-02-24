@@ -113,7 +113,12 @@ export class Purchase {
 
 
     setRating(rating: number) {
-        // ensure rating is between 1 and 10
+        if (rating < 1 || rating > 10) {
+            throw `Rating ${rating} is invalid!`;
+        }
+        else {
+            this.Rating = rating;
+        }
     }
 
 
