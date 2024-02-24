@@ -3,6 +3,8 @@ import { Purchase } from "./Purchase";
 
 
 
-export class AddToShoppingCartModal {
-
+export class AddToShoppingCartModal extends Modal {
+    constructor(app: App) {
+        super(app);
+    }
 }
