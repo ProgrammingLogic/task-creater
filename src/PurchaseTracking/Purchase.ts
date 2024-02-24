@@ -179,6 +179,11 @@ export class Purchase {
 
 
     setDueDate(dueDate: Date) {
-        // make sure dueDate is not in the past
+        if (dueDate < new Date()) {
+            throw `DueDate ${dueDate} cannot be in the past!`;
+        }
+        else {
+            this.DueDate = dueDate;
+        }
     }
 }
