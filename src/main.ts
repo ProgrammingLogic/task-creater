@@ -8,13 +8,14 @@ import { PurchaseTracking } from './PurchaseTracking/PurchaseTracking';
 export default class PersonalPlugin extends Plugin {
 	settings: PersonalPluginSettings;
 	shoppingCart: ShoppingCart;
-	purchaseTracking: PurchaseTracking;
 	
 
 	async onload() {
 		await this.loadSettings();
 
 		this.addSettingTab(new PersonalPluginSettingsTab(this.app, this));
+
+		this.shoppingCart = new ShoppingCart(this.app, this);
 	}
 
 	onunload() {
