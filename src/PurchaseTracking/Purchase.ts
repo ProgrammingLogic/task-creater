@@ -156,7 +156,15 @@ export class Purchase {
 
 
     setDatePurchased(datePurchased: Date) {
-        // make sure datePurchased is not in the future
+        if (datePurchased > new Date()) {
+            throw `DatePurchased ${datePurchased} cannot be in the future!`;
+        }
+        else if (datePurchased < this.DateCreated) { // we might want to remove this in the future
+            throw `DatePurchased ${datePurchased} cannot be before DateCreated ${this.DateCreated}!`;
+        }
+        else {
+            this.DatePurchased = datePurchased;
+        }
     }
 
 
