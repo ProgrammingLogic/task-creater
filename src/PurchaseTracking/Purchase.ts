@@ -91,7 +91,12 @@ export class Purchase {
 
 
     addTag(tag: string) {
-        this.Tags.push(tag);
+        if (this.Tags.includes(tag)) {
+            throw `Tag ${tag} already exists in Purchase ${this.Name}!`;
+        }
+        else {
+            this.Tags.push(tag);
+        }
     }
 
 
