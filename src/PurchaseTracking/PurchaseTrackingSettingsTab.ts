@@ -1,5 +1,5 @@
 import { App, PluginSettingTab, Setting } from "obsidian";
-import { PurchaseTracking } from "./ShoppingCart";
+import { PurchaseTracking } from "./PurchaseTracking";
 import PersonalPlugin from "../main";
 
 

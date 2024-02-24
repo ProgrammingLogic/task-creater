@@ -4,47 +4,47 @@ import PersonalPlugin from "../main";
 import { PersonalPluginSettings } from "src/settings";
 
 
-export class PurchaseTracking {
+export class ShoppingCart {
     app: App;
     plugin: PersonalPlugin;
     settings: PersonalPluginSettings;
-    PurchasedItems: Purchase[];
+    ItemsInCart: Purchase[];
 
 
     constructor(app: App, plugin: PersonalPlugin) {
         this.app = app;
         this.plugin = plugin;
         this.settings = this.plugin.settings;
-        this.PurchasedItems = [];
+        this.ItemsInCart = [];
     }
 
 
     addPurchase(purchase: Purchase) {
-        this.PurchasedItems.push(purchase);
+        this.ItemsInCart.push(purchase);
     }
 
 
     removePurchase(purchase: Purchase) {
-        this.PurchasedItems = this.PurchasedItems.filter(p => p.ID !== purchase.ID);
+        this.ItemsInCart = this.ItemsInCart.filter(p => p.ID !== purchase.ID);
     }
 
 
     getPurchaseByID(ID: string) {
-        return this.PurchasedItems.find(p => p.ID === ID);
+        return this.ItemsInCart.find(p => p.ID === ID);
     }
 
 
     getPurchaseByName(name: string) {
-        return this.PurchasedItems.find(p => p.Name === name);
+        return this.ItemsInCart.find(p => p.Name === name);
     }
 
 
     getPurchaseByURL(url: string) {
-        return this.PurchasedItems.find(p => p.URL === url);
+        return this.ItemsInCart.find(p => p.URL === url);
     }
 
 
     getPurchaseByTag(tag: string) {
-        return this.PurchasedItems.filter(p => p.Tags.includes(tag));
+        return this.ItemsInCart.filter(p => p.Tags.includes(tag));
     }
 }
