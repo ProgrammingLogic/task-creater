@@ -9,7 +9,7 @@ export default class PersonalPlugin extends Plugin {
 	async onload() {
 		await this.loadSettings();
 
-
+		this.addSettingTab(new PersonalPluginSettingsTab(this.app, this));
 	}
 
 	onunload() {
