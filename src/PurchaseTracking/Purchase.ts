@@ -103,7 +103,12 @@ export class Purchase {
 
 
     setPrice(price: number) {
-        
+        if (price < 0) {
+            throw `Price ${price} is invalid!`;
+        }
+        else {
+            this.Price = price;
+        }
     }
 
 
