@@ -5,6 +5,7 @@ import { IsValidURL } from "src/Utlities/ValidURL";
 export class Purchase {
     app: App;
 
+    ID: string;
     Name: string;
     Description: String;
 
@@ -45,6 +46,7 @@ export class Purchase {
     constructor(app: App) {
         this.app = app;
         this.DateCreated = new Date();
+        this.ID = this.DateCreated.getTime().toString();
 
         this.Want = false;
         this.Need = false;
