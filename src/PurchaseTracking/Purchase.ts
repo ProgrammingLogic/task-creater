@@ -146,7 +146,12 @@ export class Purchase {
 
 
     setPurchased(purchased: boolean) {
-        // make sure purchased is not true
+        if (purchased && this.DatePurchased === undefined) {
+            throw `DatePurchased must be set before setting Purchased to true!`;
+        }
+        else {
+            this.Purchased = purchased;
+        }
     }
 
 
