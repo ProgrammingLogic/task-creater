@@ -1,14 +1,17 @@
 import { App, ButtonComponent, Component, Modal, Notice, Setting } from "obsidian";
 import { Purchase } from "./Purchase";
+import { ShoppingCart } from "./ShoppingCart";
 
 
 
 export class AddToShoppingCartModal extends Modal {
     purchase: Purchase;
+    shoppingCart: ShoppingCart;
 
 
-    constructor(app: App) {
+    constructor(app: App, shoppingCart: ShoppingCart) {
         super(app);
+        this.shoppingCart = shoppingCart;
     }
 
 
@@ -138,7 +141,7 @@ export class AddToShoppingCartModal extends Modal {
 
 
     async addItemToCart() {
-        const purchase = new Purchase(this.app);
+        await this.shoppingCart.addItem(this.purchase);
         console.log(`Adding ${this.purchase.Name} to the shopping cart`);
     }
 }
