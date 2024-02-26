@@ -19,7 +19,7 @@ export class ShoppingCart {
     }
 
 
-    addPurchase(purchase: Purchase) {
+    addItem(purchase: Purchase) {
         this.ItemsInCart.push(purchase);
     }
 
